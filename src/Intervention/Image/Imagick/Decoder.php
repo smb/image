@@ -60,7 +60,9 @@ class Decoder extends \Intervention\Image\AbstractDecoder
     {
         // currently animations are not supported
         // so all images are turned into static
-        $object = $this->removeAnimation($object);
+        
+        // smb, 03.01.2017, allow animations
+        // $object = $this->removeAnimation($object);
 
         // reset image orientation
         $object->setImageOrientation(\Imagick::ORIENTATION_UNDEFINED);
